@@ -1,8 +1,13 @@
-export default function Box({ position, name, wireframe }) {
+import { useRef } from 'react'
+
+export default function Box({ ...props }) {
+  const ref = useRef()
+  console.log(ref)
+
   return (
-    <mesh position={position} name={name}>
+    <mesh {...props} ref={ref}>
       <boxGeometry />
-      <meshBasicMaterial color={0x00ff00} wireframe={wireframe} />
+      <meshBasicMaterial color={0x00ff00} wireframe />
     </mesh>
   )
 }
