@@ -2,7 +2,6 @@ import { useRef } from 'react'
 
 export default function Box({ ...props }) {
   const ref = useRef()
-  console.log(ref)
 
   return (
     <mesh {...props} ref={ref}>
